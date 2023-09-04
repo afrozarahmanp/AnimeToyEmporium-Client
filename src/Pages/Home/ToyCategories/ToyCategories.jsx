@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { FaShoppingCart } from "react-icons/fa";
 
 const ToyCategories = () => {
     const [activeTab, setActiveTab] = useState("scale");
@@ -56,7 +57,7 @@ const ToyCategories = () => {
                             <img
                                 src={toy.image}
                                 alt={toy.name}
-                                className="w-full h-64 md:h-72 lg:h-80 object-cover"
+                                className="w-full md:h-72 lg:h-80 object-cover"
                             />
                         </figure>
                         <div className="card-body">
@@ -65,9 +66,14 @@ const ToyCategories = () => {
                             <p>Price: ${toy.price.toFixed(2)}</p>
                             <p>Rating: {toy.rating}</p>
                             <p>Total Selling: {toy.total_selling}</p>
-                            <button className="btn-details bg-gradient-to-r from-purple-500 to-blue-500 text-white px-4 py-2 rounded-lg">
-                                View Details
-                            </button>
+                            <div className="flex justify-between lg:flex-col lg:space-y-2">
+                                <button className="btn bg-gradient-to-r from-purple-500 to-blue-500 text-white px-2 md:px-4 py-2 rounded-lg">
+                                    Add to Cart <FaShoppingCart />
+                                </button>
+                                <button className="btn bg-gradient-to-r from-purple-500 to-blue-500 text-white px-2 md:px-4 py-2 rounded-lg">
+                                    View Details
+                                </button>
+                            </div>
                         </div>
                     </div>
                 ))}
