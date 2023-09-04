@@ -5,7 +5,7 @@ const Header = () => {
 
     const navItems = <>
         <li><Link to='/'>Home</Link></li>
-        <li><Link to='/about'>Toys</Link></li>
+        <li><Link to='/alltoys'>Toys</Link></li>
         <li><Link to='/blog'>Blog</Link></li>
         {/* {user?.email ? <>
             <li><Link to='/bookings'>My Bookings</Link></li>
@@ -27,7 +27,8 @@ const Header = () => {
                         {navItems}
                     </ul>
                 </div>
-                <a className="btn btn-ghost normal-case text-xl">AnimeToyEmporium</a>
+                <Link className="btn btn-ghost normal-case text-xl" to='/'>AnimeToyEmporium</Link>
+                
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">

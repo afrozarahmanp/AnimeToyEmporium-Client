@@ -1,6 +1,6 @@
 [
     {
-        "id": 1,
+        "_id": 1,
         "image": "https://i.ibb.co/0qYPvgg/Final-Fantasy-VII-Cloud-Strife-Figure.jpg",
         "name": "Final Fantasy VII Cloud Strife Figure",
         "weight": "200g",
@@ -11,7 +11,7 @@
         "description": "A detailed figure of Cloud Strife from Final Fantasy VII. Comes with his iconic Buster Sword and multiple display options."
     },
     {
-        "id": 2,
+        "_id": 2,
         "image": "https://i.ibb.co/N33fCCg/One-Piece-Portgas-D-Ace-Figure.webp",
         "name": "One Piece Portgas D. Ace Figure",
         "weight": "180g",
@@ -22,7 +22,7 @@
         "description": "A collectible figure of Portgas D. Ace from One Piece. Captures the essence of the character's fiery spirit."
     },
     {
-        "id": 3,
+        "_id": 3,
         "image": "https://i.ibb.co/ZYRvPjK/Attack-on-Titan-Levi-Ackerman-Statue.jpg",
         "name": "Attack on Titan Levi Ackerman Statue",
         "weight": "250g",
@@ -33,7 +33,7 @@
         "description": "A highly detailed statue of Levi Ackerman from Attack on Titan. A must-have for fans of the series."
     },
     {
-        "id": 4,
+        "_id": 4,
         "image": "https://i.ibb.co/bQ2Rc00/Dragon-Ball-Super-Goku-Ultra-Instinct-Figure.webp",
         "name": "Dragon Ball Super Goku Ultra Instinct Figure",
         "weight": "220g",
@@ -44,7 +44,7 @@
         "description": "A dynamic figure of Goku in his Ultra Instinct form from Dragon Ball Super. Showcases his incredible power."
     },
     {
-        "id": 5,
+        "_id": 5,
         "image": "https://i.ibb.co/g3rcRCf/My-Hero-Academia-All-Might-Figure.webp",
         "name": "My Hero Academia All Might Figure",
         "weight": "210g",
@@ -55,7 +55,7 @@
         "description": "A heroic figure of All Might from My Hero Academia. Perfect for fans of the series and collectors."
     },
     {
-        "id": 6,
+        "_id": 6,
         "image": "https://i.ibb.co/0Bp9MVt/Demon-Slayer-Tanjiro-Kamado-Figure.jpg",
         "name": "Demon Slayer Tanjiro Kamado Figure",
         "weight": "190g",
@@ -66,7 +66,7 @@
         "description": "A beautifully crafted figure of Tanjiro Kamado from Demon Slayer. Captures his determined spirit."
     },
     {
-        "id": 7,
+        "_id": 7,
         "image": "https://i.ibb.co/GJtLQr7/Naruto-Uzumaki-Sage-of-the-Six-Paths-Figure.jpg",
         "name": "Naruto Uzumaki Sage of the Six Paths Figure",
         "weight": "210g",
@@ -77,7 +77,7 @@
         "description": "An exquisite figure of Naruto Uzumaki in his Sage of the Six Paths form. Perfect for Naruto fans."
     },
     {
-        "id": 8,
+        "_id": 8,
         "image": "https://i.ibb.co/VxK67zR/Marvel-Iron-Man-Mark-XLIII-Statue.webp",
         "name": "Marvel Iron Man Mark XLIII Statue",
         "weight": "230g",
@@ -88,7 +88,7 @@
         "description": "A stunning statue of Iron Man Mark XLIII from the Marvel Cinematic Universe. Ideal for Marvel collectors."
     },
     {
-        "id": 9,
+        "_id": 9,
         "image": "https://i.ibb.co/pjFnMXY/Nendoroid-Sakura-Kinomoto.webp",
         "name": "Nendoroid Sakura Kinomoto",
         "weight": "150g",
@@ -99,7 +99,7 @@
         "description": "A cute Nendoroid figure of Sakura Kinomoto from Cardcaptor Sakura. Comes with various faceplates and magical accessories."
     },
     {
-        "id": 10,
+        "_id": 10,
         "image": "https://i.ibb.co/FKZ5sZ5/61qp-WL26-l-L-1.jpg",
         "name": "Nendoroid Link from The Legend of Zelda",
         "weight": "160g",
@@ -110,7 +110,7 @@
         "description": "A highly poseable Nendoroid figure of Link from The Legend of Zelda series. Includes his iconic Master Sword."
     },
     {
-        "id": 11,
+        "_id": 11,
         "image": "https://i.ibb.co/tpByvcr/Nendoroid-Luffy-from-One-Piece.jpg",
         "name": "Nendoroid Luffy from One Piece",
         "weight": "145g",
@@ -121,7 +121,7 @@
         "description": "A Nendoroid figure of Monkey D. Luffy from One Piece. Captures Luffy's adventurous spirit."
     },
     {
-        "id": 12,
+        "_id": 12,
         "image": "https://i.ibb.co/bKRP3nr/Nendoroid-Zero-Two-from-Darling-in-the-Franxx.jpg",
         "name": "Nendoroid Zero Two from Darling in the Franxx",
         "weight": "140g",
@@ -132,7 +132,7 @@
         "description": "A delightful Nendoroid figure of Zero Two from the anime Darling in the Franxx. A must-have for fans."
     },
     {
-        "id": 13,
+        "_id": 13,
         "image": "https://i.ibb.co/fHFxSFv/Nendoroid-Pikachu.jpg",
         "name": "Nendoroid Pikachu",
         "weight": "130g",
@@ -143,7 +143,7 @@
         "description": "A cute and electrifying Nendoroid figure of Pikachu from Pokémon. A great addition to any Pokémon collection."
     },
     {
-        "id": 14,
+        "_id": 14,
         "image": "https://i.ibb.co/VJDStHP/Nendoroid-Mario-from-Super-Mario.jpg",
         "name": "Nendoroid Mario from Super Mario",
         "weight": "150g",
@@ -154,7 +154,7 @@
         "description": "An adorable Nendoroid figure of Mario from the Super Mario franchise. Comes with iconic power-ups."
     },
     {
-        "id": 15,
+        "_id": 15,
         "image": "https://i.ibb.co/4YNm2LP/Figma-Link-from-The-Legend-of-Zelda.jpg",
         "name": "Figma Link from The Legend of Zelda",
         "weight": "170g",
@@ -165,7 +165,7 @@
         "description": "A highly articulated Figma figure of Link from The Legend of Zelda series. Includes a variety of accessories."
     },
     {
-        "id": 16,
+        "_id": 16,
         "image": "https://i.ibb.co/Tk7X175/Figma-Saber-from-Fate.webp",
         "name": "Figma Saber from Fate/Stay Night",
         "weight": "180g",
@@ -176,7 +176,7 @@
         "description": "A detailed Figma figure of Saber from Fate/Stay Night. Perfect for fans of the Fate series and collectors alike."
     },
     {
-        "id": 17,
+        "_id": 17,
         "image": "https://i.ibb.co/qMXQcnj/Figma-Spider-Man.jpg",
         "name": "Figma Spider-Man",
         "weight": "175g",
@@ -187,7 +187,7 @@
         "description": "A highly articulated Figma figure of Spider-Man. Recreate dynamic poses and action scenes with ease."
     },
     {
-        "id": 18,
+        "_id": 18,
         "image": "https://i.ibb.co/FxqhjDQ/Figma-Joker-from-Persona-5.jpg",
         "name": "Figma Joker from Persona 5",
         "weight": "165g",
@@ -198,7 +198,7 @@
         "description": "A Figma figure of Joker from Persona 5. Includes his iconic mask and weapons for stealthy action."
     },
     {
-        "id": 19,
+        "_id": 19,
         "image": "https://i.ibb.co/FVzfnmc/Figma-Master-Chief-from-Halo.jpg",
         "name": "Figma Master Chief from Halo",
         "weight": "185g",
@@ -209,7 +209,7 @@
         "description": "A highly detailed Figma figure of Master Chief from the Halo video game series. Equipped for battle."
     },
     {
-        "id": 20,
+        "_id": 20,
         "image": "https://i.ibb.co/1Z0ysx9/Figma-Wonder-Woman.jpg",
         "name": "Figma Wonder Woman",
         "weight": "155g",

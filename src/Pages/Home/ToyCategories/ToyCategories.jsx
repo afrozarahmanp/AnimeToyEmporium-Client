@@ -1,5 +1,7 @@
+import { Rating } from "@smastrom/react-rating";
 import { useEffect, useState } from "react";
 import { FaShoppingCart } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const ToyCategories = () => {
     const [activeTab, setActiveTab] = useState("scale");
@@ -39,8 +41,8 @@ const ToyCategories = () => {
                     <button
                         key={category}
                         className={`tab-button ${activeTab === category
-                                ? "active-tab text-white bg-gradient-to-r from-purple-500 to-blue-500 p-2 rounded-md "
-                                : "text-white  bg-gradient-to-r from-purple-500 to-blue-500 p-2 rounded-md m-2"
+                            ? "active-tab text-white bg-gradient-to-r from-purple-500 to-blue-500 p-2 rounded-md "
+                            : "text-white  bg-gradient-to-r from-purple-500 to-blue-500 p-2 rounded-md m-2"
                             }`}
                         onClick={() => handleTabClick(category)}
                     >
@@ -52,7 +54,7 @@ const ToyCategories = () => {
             {/* Display toy data based on the active tab */}
             <div className="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {filteredData.map((toy) => (
-                    <div className="card lg:card-side bg-base-100 shadow-xl" key={toy.id}>
+                    <div className="card lg:card-side bg-base-100 shadow-xl" key={toy._id}>
                         <figure>
                             <img
                                 src={toy.image}
@@ -64,15 +66,21 @@ const ToyCategories = () => {
                             <h3 className="card-title">{toy.name}</h3>
                             <p>Weight: {toy.weight}</p>
                             <p>Price: ${toy.price.toFixed(2)}</p>
-                            <p>Rating: {toy.rating}</p>
+                            <div className="flex"><Rating style={{ maxWidth: 75 }} value={Math.round(toy.rating || 0)} readOnly />
+                        <span className="ms-2">{toy.rating}</span>
+                    </div>
                             <p>Total Selling: {toy.total_selling}</p>
                             <div className="flex justify-between lg:flex-col lg:space-y-2">
                                 <button className="btn bg-gradient-to-r from-purple-500 to-blue-500 text-white px-2 md:px-4 py-2 rounded-lg">
                                     Add to Cart <FaShoppingCart />
                                 </button>
-                                <button className="btn bg-gradient-to-r from-purple-500 to-blue-500 text-white px-2 md:px-4 py-2 rounded-lg">
-                                    View Details
-                                </button>
+
+                                <Link to={`/alltoys/${toy._id}`}>
+                                    <button className="btn bg-gradient-to-r from-purple-500 to-blue-500 text-white px-2 md:px-4 py-2 rounded-lg">
+                                        View Details
+                                    </button>
+                                </Link>
+                                
                             </div>
                         </div>
                     </div>
