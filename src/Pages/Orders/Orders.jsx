@@ -27,6 +27,28 @@ const Orders = () => {
         }
     }
 
+    const handleOrderConfirm = id =>{
+        fetch(`http://localhost:3000/ordertoys/${id}`,{
+            method: 'PATCH',
+            headers: {'content-type': 'application/json'},
+            body: JSON.stringify(
+                {status: 'confirm'}
+            )
+        })
+        .then(res=> res.json())
+        .then(data => {
+            console.log(data);
+            if(data.modifiedCount > 0 ){
+                //update state
+                const remaining = orders.filter(order => order._id !== id);
+                const updated = orders.find(order =>order._id === id);
+                updated.status = 'Confirm'
+                const newOrders = [updated, ...remaining];
+                setOrders(newOrders)
+             }
+        })
+    }
+
 
     const url = `http://localhost:3000/ordertoys?email=${user?.email}`;
     useEffect(() => {
@@ -59,6 +81,7 @@ const Orders = () => {
                         key={order._id}
                         order= {order}
                         handleDelete={handleDelete}
+                        handleOrderConfirm={handleOrderConfirm}
                         ></OrderRow>)
 
                    }
