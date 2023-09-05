@@ -10,6 +10,7 @@ import CheckOut from "../Pages/CheckOut/CheckOut";
 import Orders from "../Pages/Orders/Orders";
 import PrivateRoute from "./PrivateRoute";
 import NotFound from "../Pages/NotFound/NotFound";
+import AddAToy from "../Pages/AddAToy/AddAToy";
 
 const router = createBrowserRouter([
     {
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
         {
           path: '/ordertoys',
           element: <PrivateRoute><Orders></Orders></PrivateRoute>
+        },
+        {
+          path: '/addatoy',
+          element: <PrivateRoute><AddAToy></AddAToy></PrivateRoute>
         }
         
       ]

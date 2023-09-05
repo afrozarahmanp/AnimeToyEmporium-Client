@@ -1,13 +1,18 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import img from '../../assets/Login/image.avif'
 import { useContext } from 'react';
 import { AuthContext } from '../../Providers/AuthProvider';
+import SocialLogin from '../SocialLogin/SocialLogin';
 
 const Login = () => {
 
     const { signIn } = useContext(AuthContext);
+    const navigate = useNavigate();
+    const location = useLocation();
+    console.log('login page location', location);
+    const from = location.state?.from?.pathname || '/';
 
-    const handleLogin = event =>{
+    const handleLogin = event => {
         event.preventDefault();
         const form = event.target;
         const email = form.email.value;
@@ -16,9 +21,10 @@ const Login = () => {
         signIn(email, password)
             .then(result => {
                 const user = result.user;
-                
+
                 console.log(user);
-               
+                navigate(from, { replaCE: true })
+
             })
             .catch(error => console.log(error));
     }
@@ -49,11 +55,12 @@ const Login = () => {
                                 </label>
                             </div>
                             <div className="form-control mt-6">
-                                <input className="btn btn-primary" type="submit" value="Login" />
+                                <input className="btn bg-gradient-to-r from-blue-500 to-purple-500 text-white font-bold " type="submit" value="Login" />
                             </div>
                         </form>
                         <p className='my-4 text-center'>New to AnimeToyEmporium? <Link className='text-blue-800 font-bold' to="/signup">Sign Up</Link> </p>
-                        
+
+                        <SocialLogin></SocialLogin>
                     </div>
                 </div>
             </div>
