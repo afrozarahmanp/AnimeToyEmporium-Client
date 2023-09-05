@@ -8,6 +8,25 @@ const Orders = () => {
     const { user } = useContext(AuthContext);
     const [orders, setOrders] = useState([]);
 
+    const handleDelete = id => {
+        const proceed = confirm('Are you sure you want to delete?')
+        if (proceed) {
+            fetch(`http://localhost:3000/ordertoys/${id}`,{
+                method: 'DELETE'
+            })
+            .then(res =>res.json())
+            .then(data =>{
+                console.log(data);
+                if(data.deletedCount > 0){
+                    alert('Deleted Successfully!');
+                    const remaining = orders.filter(order => order._id !== id);
+                    setOrders(remaining)
+                }
+            })
+
+        }
+    }
+
 
     const url = `http://localhost:3000/ordertoys?email=${user?.email}`;
     useEffect(() => {
@@ -39,6 +58,7 @@ const Orders = () => {
                     orders.map(order => <OrderRow
                         key={order._id}
                         order= {order}
+                        handleDelete={handleDelete}
                         ></OrderRow>)
 
                    }

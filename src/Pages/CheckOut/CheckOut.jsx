@@ -9,6 +9,7 @@ const CheckOut = () => {
 
     const { image, price,name  } = toys;
     const { user } = useContext(AuthContext);
+    
 
     const handleBookService = event => {
         event.preventDefault();
