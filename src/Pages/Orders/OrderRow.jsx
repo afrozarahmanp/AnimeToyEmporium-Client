@@ -1,7 +1,7 @@
 
 const OrderRow = ({ order, handleDelete, handleOrderConfirm }) => {
 
-    const { _id, image, custonerName, email, date ,name, price } = order;
+    const { _id, image, custonerName, email, date ,name, price,status } = order;
 
     return (
         <tr>

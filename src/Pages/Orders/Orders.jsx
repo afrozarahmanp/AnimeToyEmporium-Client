@@ -11,42 +11,42 @@ const Orders = () => {
     const handleDelete = id => {
         const proceed = confirm('Are you sure you want to delete?')
         if (proceed) {
-            fetch(`http://localhost:3000/ordertoys/${id}`,{
+            fetch(`http://localhost:3000/ordertoys/${id}`, {
                 method: 'DELETE'
             })
-            .then(res =>res.json())
-            .then(data =>{
-                console.log(data);
-                if(data.deletedCount > 0){
-                    alert('Deleted Successfully!');
-                    const remaining = orders.filter(order => order._id !== id);
-                    setOrders(remaining)
-                }
-            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data);
+                    if (data.deletedCount > 0) {
+                        alert('Deleted Successfully!');
+                        const remaining = orders.filter(order => order._id !== id);
+                        setOrders(remaining)
+                    }
+                })
 
         }
     }
 
-    const handleOrderConfirm = id =>{
-        fetch(`http://localhost:3000/ordertoys/${id}`,{
+    const handleOrderConfirm = id => {
+        fetch(`http://localhost:3000/ordertoys/${id}`, {
             method: 'PATCH',
-            headers: {'content-type': 'application/json'},
-            body: JSON.stringify(
-                {status: 'confirm'}
-            )
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify({ status: 'confirm' })
         })
-        .then(res=> res.json())
-        .then(data => {
-            console.log(data);
-            if(data.modifiedCount > 0 ){
-                //update state
-                const remaining = orders.filter(order => order._id !== id);
-                const updated = orders.find(order =>order._id === id);
-                updated.status = 'Confirm'
-                const newOrders = [updated, ...remaining];
-                setOrders(newOrders)
-             }
-        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.modifiedCount > 0) {
+                    // update state
+                    const remaining = orders.filter(order => order._id !== id);
+                    const updated = orders.find(order => order._id === id);
+                    updated.status = 'confirm'
+                    const newOrder = [updated, ...remaining];
+                    setOrders(newOrder);
+                }
+            })
     }
 
 
@@ -59,39 +59,39 @@ const Orders = () => {
 
     return (
         <div>
-        <h2>Your Orders: {orders.length}</h2>
-        <div className="overflow-x-auto">
-            <table className="table">
-                {/* head */}
-                <thead>
-                    <tr>
-                        <th>
-                        </th>
-                        <th>Order</th>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Price</th>
-                        <th>Date</th>
-                        <th>Status</th>
-                    </tr>
-                </thead>
-                <tbody>
-                   {
-                    orders.map(order => <OrderRow
-                        key={order._id}
-                        order= {order}
-                        handleDelete={handleDelete}
-                        handleOrderConfirm={handleOrderConfirm}
-                        ></OrderRow>)
+            <h2>Your Orders: {orders.length}</h2>
+            <div className="overflow-x-auto">
+                <table className="table">
+                    {/* head */}
+                    <thead>
+                        <tr>
+                            <th>
+                            </th>
+                            <th>Order</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Price</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {
+                            orders.map(order => <OrderRow
+                                key={order._id}
+                                order={order}
+                                handleDelete={handleDelete}
+                                handleOrderConfirm={handleOrderConfirm}
+                            ></OrderRow>)
 
-                   }
-                </tbody>
-               
+                        }
+                    </tbody>
 
 
-            </table>
+
+                </table>
+            </div>
         </div>
-    </div>
     );
 };
 
