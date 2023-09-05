@@ -5,8 +5,15 @@ import { AuthContext } from "../../../Providers/AuthProvider";
 
 const Header = () => {
 
-    const { user } = useContext(AuthContext)
+    const { user, logOut } = useContext(AuthContext)
 
+    const handleLogOut = () => {
+        logOut()
+            .then(() => {
+
+            })
+            .catch(error => console.log(error))
+    }
 
     const navItems = <>
         <li><Link to='/' className="text-lg font-semibold">Home</Link></li>
@@ -48,11 +55,16 @@ const Header = () => {
                             <div className="card-body">
                                 <span className="font-bold text-lg">8 Items</span>
                                 <span className="text-info">Subtotal: $999</span>
+                                <div className="card-actions">
+                                    <Link to= '/ordertoys'>
+                                    <button className="btn btn-primary btn-block">View cart</button>
+                                    </Link>
+                                </div>
 
                             </div>
                         </div>
                     </div>
-                    <button className="btn btn-outline btn-primary ml-2">LogOut</button>
+                    <button  onClick={handleLogOut} className="btn btn-outline btn-primary ml-2">LogOut</button>
                 </> :
                     <Link to='/login' className="btn btn-outline btn-primary ml-2">Login</Link>
 
