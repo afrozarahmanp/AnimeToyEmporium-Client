@@ -32,7 +32,7 @@ const OrderRow = ({ order, handleDelete, handleOrderConfirm }) => {
             <td>{date}</td>
             <th>
                 {status === 'confirm'? <span className="font-bold text-primary">Confirmed</span>:
-                    <button onClick={() => handleOrderConfirm(_id)} className="btn btn-ghost btn-xs">Please Confirm</button>}
+                    <button onClick={() => handleOrderConfirm(_id)} className="btn btn-ghost btn-xs">Confirm Order</button>}
             </th>
         </tr>
     );

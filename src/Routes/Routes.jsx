@@ -9,6 +9,7 @@ import SignUp from "../Pages/Home/SignUp/SignUp";
 import CheckOut from "../Pages/CheckOut/CheckOut";
 import Orders from "../Pages/Orders/Orders";
 import PrivateRoute from "./PrivateRoute";
+import NotFound from "../Pages/NotFound/NotFound";
 
 const router = createBrowserRouter([
     {
@@ -53,8 +54,11 @@ const router = createBrowserRouter([
 
       },
       
-        
       ]
+    },
+    {
+      path: '*',
+      element:<NotFound></NotFound>
     }
   ]);
 
