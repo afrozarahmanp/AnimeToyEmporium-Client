@@ -31,9 +31,11 @@ const AllToys = () => {
                             <p>Rating: {toy.rating}</p>
                             <p>Total Selling: {toy.total_selling}</p>
                             <div className="flex justify-between lg:flex-col lg:space-y-2">
+                                <Link to={`/checkout/${toy._id}`}>
                                 <button className="btn bg-gradient-to-r from-purple-500 to-blue-400 text-white px-2 md:px-4 py-2 rounded-lg">
                                     Add to Cart <FaShoppingCart />
                                 </button>
+                                </Link>
                                 <Link to={`/alltoys/${toy._id}`}>
                                     <button className="btn bg-gradient-to-r from-purple-500 to-blue-500 text-white px-2 md:px-4 py-2 rounded-lg">
                                         View Details
