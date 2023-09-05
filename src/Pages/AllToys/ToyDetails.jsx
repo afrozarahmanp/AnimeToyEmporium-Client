@@ -17,7 +17,7 @@ const ToyDetails = () => {
                 <div className="card-body space-y-6">
                     <div>
                         <h2 className="card-title">{name}</h2>
-                        <p>{weight}</p>
+                        <p>Weight: {weight}</p>
                     </div>
                     <p>{description}</p>
 

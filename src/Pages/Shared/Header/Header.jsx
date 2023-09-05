@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 const Header = () => {
 
     const navItems = <>
-        <li><Link to='/'>Home</Link></li>
-        <li><Link to='/alltoys'>Toys</Link></li>
-        <li><Link to='/blog'>Blog</Link></li>
+        <li><Link to='/' className="text-lg font-semibold">Home</Link></li>
+        <li><Link to='/alltoys' className="text-lg font-semibold">Toys</Link></li>
+        <li><Link to='/blog' className="text-lg font-semibold">Blog</Link></li>
         {/* {user?.email ? <>
             <li><Link to='/bookings'>My Bookings</Link></li>
             <li><button onClick={handleLogOut}>LogOut</button></li>
@@ -27,7 +27,7 @@ const Header = () => {
                         {navItems}
                     </ul>
                 </div>
-                <Link className="btn btn-ghost normal-case text-xl" to='/'>AnimeToyEmporium</Link>
+                <Link className="btn btn-ghost normal-case text-2xl font-bold" to='/'>AnimeToyEmporium</Link>
                 
             </div>
             <div className="navbar-center hidden lg:flex">
@@ -53,7 +53,7 @@ const Header = () => {
                         </div>
                     </div>
                 </div>
-                <button className="btn btn-outline btn-primary ml-2">Login</button>
+                <Link to='/login' className="btn btn-outline btn-primary ml-2">Login</Link>
             </div>
         </div>
     );

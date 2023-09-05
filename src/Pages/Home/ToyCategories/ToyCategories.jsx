@@ -14,10 +14,10 @@ const ToyCategories = () => {
         3: "figma",
     };
 
-    // Fetch toy data from toys.json when the component mounts
+   
     useEffect(() => {
-        // Replace 'toys.json' with the actual path to your JSON file
-        fetch("toys.json")
+       
+        fetch("http://localhost:3000/alltoys")
             .then((response) => response.json())
             .then((data) => setToyData(data))
             .catch((error) => console.error("Error fetching toy data:", error));

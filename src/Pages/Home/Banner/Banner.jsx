@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import banner from '../../../assets/Banner/Figma-Figures.jpg'
 
 const Banner = () => {
@@ -18,7 +19,7 @@ const Banner = () => {
                     </span>
 
                 </p>
-               <button className="mt-3 btn btn-primary bg-[#16154d]">All Toys</button>
+               <Link to='/alltoys' className="mt-3 btn btn-primary bg-[#16154d]">All Toys</Link>
             </div>
 
 
