@@ -1,0 +1,58 @@
+[
+    {
+        "id": 21,
+        "image": "https://i.ibb.co/SXXXhqh/Mega-Man-X-Figure.jpg",
+        "name": "Mega Man X Figure",
+        "weight": "190g",
+        "category_id": 1,
+        "price": 49.99,
+        "rating": 4.5,
+        "total_selling": 88,
+        "description": "A detailed figure of Mega Man X from the classic video game series. Ready for action with his trusty blaster."
+    },
+    {
+        "id": 22,
+        "image": "https://i.ibb.co/qkMgLHH/Nendoroid-Sailor-Moon.jpg",
+        "name": "Nendoroid Sailor Moon",
+        "weight": "155g",
+        "category_id": 2,
+        "price": 54.99,
+        "rating": 4.8,
+        "total_selling": 110,
+        "description": "A lovely Nendoroid figure of Sailor Moon. Features her iconic outfit and magical accessories."
+    },
+    {
+        "id": 23,
+        "image": "https://i.ibb.co/x2fF90t/Nendoroid-Spider-Man.jpg",
+        "name": "Nendoroid Spider-Man",
+        "weight": "145g",
+        "category_id": 2,
+        "price": 49.99,
+        "rating": 4.7,
+        "total_selling": 102,
+        "description": "A Nendoroid figure of Spider-Man. Swing into action with different web-slinging poses."
+    },
+    {
+        "id": 24,
+        "image": "https://i.ibb.co/kX1ncxb/Figma-Batman.jpg",
+        "name": "Figma Batman",
+        "weight": "170g",
+        "category_id": 3,
+        "price": 59.99,
+        "rating": 4.9,
+        "total_selling": 128,
+        "description": "A highly articulated Figma figure of Batman from DC Comics. Comes with various gadgets and a bat signal."
+    },
+    {
+        "id": 25,
+        "image": "https://i.ibb.co/bKYsqS9/Figma-Overwatch-Tracer.jpg",
+        "name": "Figma Overwatch Tracer",
+        "weight": "160g",
+        "category_id": 3,
+        "price": 54.99,
+        "rating": 4.6,
+        "total_selling": 96,
+        "description": "A detailed Figma figure of Tracer from Overwatch. Blink into battle with this poseable figure."
+    }
+    
+]

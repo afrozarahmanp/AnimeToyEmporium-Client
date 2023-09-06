@@ -1,7 +1,7 @@
 
 const OrderRow = ({ order, handleDelete, handleOrderConfirm }) => {
 
-    const { _id, image, custonerName, email, date ,name, price,status } = order;
+    const { _id, image, custonerName, email, date, name, price, status } = order;
 
     return (
         <tr>
@@ -14,6 +14,7 @@ const OrderRow = ({ order, handleDelete, handleOrderConfirm }) => {
                 <div className="flex items-center space-x-3">
                     <div className="avatar">
                         <div className="rounded w-12 h-12">
+
                             <img src={image} alt="Avatar Tailwind CSS Component" />
                         </div>
                     </div>
@@ -31,7 +32,7 @@ const OrderRow = ({ order, handleDelete, handleOrderConfirm }) => {
             <td>${price}</td>
             <td>{date}</td>
             <th>
-                {status === 'confirm'? <span className="font-bold text-primary">Confirmed</span>:
+                {status === 'confirm' ? <span className="font-bold text-primary">Confirmed</span> :
                     <button onClick={() => handleOrderConfirm(_id)} className="btn btn-ghost btn-xs">Confirm Order</button>}
             </th>
         </tr>

@@ -9,7 +9,7 @@ const Home = () => {
             <Banner></Banner>
             <Slider></Slider>
             <ToyCategories></ToyCategories>
-            <h2>Home</h2>
+            
         </div>
     );
 };

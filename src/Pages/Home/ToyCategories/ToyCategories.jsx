@@ -14,10 +14,10 @@ const ToyCategories = () => {
         3: "figma",
     };
 
-   
+
     useEffect(() => {
-       
-        fetch("http://localhost:3000/alltoys")
+
+        fetch("https://anime-toy-emporium-server.vercel.app/alltoys")
             .then((response) => response.json())
             .then((data) => setToyData(data))
             .catch((error) => console.error("Error fetching toy data:", error));
@@ -34,7 +34,7 @@ const ToyCategories = () => {
     );
 
     return (
-        <div className="container mx-auto mt-8">
+        <div className="container mx-auto mt-8 mb-8">
             {/* Tabs */}
             <div className="flex justify-center">
                 {Object.values(categoryMapping).map((category) => (
@@ -65,22 +65,23 @@ const ToyCategories = () => {
                         <div className="card-body">
                             <h3 className="card-title">{toy.name}</h3>
                             <p>Weight: {toy.weight}</p>
-                            <p>Price: ${toy.price.toFixed(2)}</p>
+                            <p>Price: ${toy.price}</p>
                             <div className="flex"><Rating style={{ maxWidth: 75 }} value={Math.round(toy.rating || 0)} readOnly />
-                        <span className="ms-2">{toy.rating}</span>
-                    </div>
+                                <span className="ms-2">{toy.rating}</span>
+                            </div>
                             <p>Total Selling: {toy.total_selling}</p>
                             <div className="flex justify-between lg:flex-col lg:space-y-2">
-                                <button className="btn bg-gradient-to-r from-purple-500 to-blue-500 text-white px-2 md:px-4 py-2 rounded-lg">
+                                <Link to={`/checkout/${toy._id}`}><button className="btn bg-gradient-to-r from-purple-500 to-blue-500 text-white px-2 md:px-4 py-2 rounded-lg">
                                     Add to Cart <FaShoppingCart />
-                                </button>
+                                </button></Link>
+
 
                                 <Link to={`/alltoys/${toy._id}`}>
                                     <button className="btn bg-gradient-to-r from-purple-500 to-blue-500 text-white px-2 md:px-4 py-2 rounded-lg">
                                         View Details
                                     </button>
                                 </Link>
-                                
+
                             </div>
                         </div>
                     </div>

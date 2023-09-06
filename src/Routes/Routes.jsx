@@ -11,6 +11,7 @@ import Orders from "../Pages/Orders/Orders";
 import PrivateRoute from "./PrivateRoute";
 import NotFound from "../Pages/NotFound/NotFound";
 import AddAToy from "../Pages/AddAToy/AddAToy";
+import Blog from "../Pages/Blog/Blog";
 
 const router = createBrowserRouter([
     {
@@ -32,7 +33,7 @@ const router = createBrowserRouter([
         {
           path: '/checkout/:id',
           element:<PrivateRoute><CheckOut></CheckOut></PrivateRoute>,
-          loader: ({params})=>fetch(`http://localhost:3000/alltoys/${params.id}`)        
+          loader: ({params})=>fetch(`https://anime-toy-emporium-server.vercel.app/alltoys/${params.id}`)        
         },
         {
           path: '/ordertoys',
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
         {
           path: '/addatoy',
           element: <PrivateRoute><AddAToy></AddAToy></PrivateRoute>
+        },
+        {
+          path: '/blog',
+          element: <Blog></Blog>
         }
         
       ]
@@ -55,7 +60,7 @@ const router = createBrowserRouter([
       {
         path: ':id',
         element: <PrivateRoute><ToyDetails></ToyDetails></PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:3000/alltoys/${params.id}`)
+        loader: ({ params }) => fetch(`https://anime-toy-emporium-server.vercel.app/alltoys/${params.id}`)
 
       },
       

@@ -1,5 +1,5 @@
 import { Rating } from "@smastrom/react-rating";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import '@smastrom/react-rating/style.css';
 import './ToyDetails.css'; // Import your custom CSS file for styles
 import { FaShoppingCart } from "react-icons/fa";
@@ -8,7 +8,7 @@ const ToyDetails = () => {
     const toyDetails = useLoaderData();
     console.log("ToyDetails Data:", toyDetails);
 
-    const { image, name, weight, price, rating, total_selling, description } = toyDetails;
+    const { image, name, weight, price, rating, total_selling, description, _id } = toyDetails;
 
     return (
         <div className="center-card mt-10 mb-10">
@@ -28,9 +28,11 @@ const ToyDetails = () => {
 
                     <p>Total Selling: {total_selling}</p>
                     <div className="card-actions justify-end">
-                    <button className="btn bg-gradient-to-r from-purple-500 to-blue-500 text-white px-2 md:px-4 py-2 rounded-lg">
-                                    Add to Cart <FaShoppingCart />
-                                </button>
+                        <Link to={`/checkout/${_id}`}
+                        ><button className="btn bg-gradient-to-r from-purple-500 to-blue-500 text-white px-2 md:px-4 py-2 rounded-lg">
+                                Add to Cart <FaShoppingCart />
+                            </button></Link>
+
                     </div>
                 </div>
             </div>

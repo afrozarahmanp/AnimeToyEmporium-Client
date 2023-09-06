@@ -11,7 +11,7 @@ const Orders = () => {
     const handleDelete = id => {
         const proceed = confirm('Are you sure you want to delete?')
         if (proceed) {
-            fetch(`http://localhost:3000/ordertoys/${id}`, {
+            fetch(`https://anime-toy-emporium-server.vercel.app/ordertoys/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())
@@ -28,7 +28,7 @@ const Orders = () => {
     }
 
     const handleOrderConfirm = id => {
-        fetch(`http://localhost:3000/ordertoys/${id}`, {
+        fetch(`https://anime-toy-emporium-server.vercel.app/ordertoys/${id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'
@@ -50,7 +50,7 @@ const Orders = () => {
     }
 
 
-    const url = `http://localhost:3000/ordertoys?email=${user?.email}`;
+    const url = `https://anime-toy-emporium-server.vercel.app/ordertoys?email=${user?.email}`;
     useEffect(() => {
         fetch(url)
             .then(res => res.json())

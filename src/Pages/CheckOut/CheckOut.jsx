@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
 
 
@@ -7,11 +7,16 @@ const CheckOut = () => {
 
     const toys = useLoaderData();
 
+    const navigate = useNavigate();
+    const location = useLocation();
+    console.log('login page location', location);
+    const from = location.state?.from?.pathname || '/';
+
     const { image, price,name  } = toys;
     const { user } = useContext(AuthContext);
     
 
-    const handleBookService = event => {
+    const handleToyCheckOut = event => {
         event.preventDefault();
 
         const form = event.target;
@@ -30,7 +35,7 @@ const CheckOut = () => {
         console.log(order);
 
 
-        fetch('http://localhost:3000/ordertoys', {
+        fetch('https://anime-toy-emporium-server.vercel.app/ordertoys', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -42,6 +47,7 @@ const CheckOut = () => {
                 console.log(data);
                 if(data.insertedId){
                     alert('Order placed successfully')
+                    navigate(from, { replace: true })
                 }
             })
     }
@@ -52,7 +58,7 @@ const CheckOut = () => {
                 <h2 className="text-center text-2xl font-bold">
                     Add to order: {name}
                 </h2>
-                <form onSubmit={handleBookService}>
+                <form onSubmit={handleToyCheckOut}>
                     <div className="card-body">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div className="form-control">
